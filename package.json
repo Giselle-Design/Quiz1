@@ -1,0 +1,29 @@
+{
+  "name": "quiz1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "db:create": "createdb --echo cluck_app",
+    "db:drop": "dropdb --if-exists --echo cluck_app",
+    "db:migrate": "knex migrate:latest",
+    "db:rollback": "knex migrate:rollback",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate"
+  },
+  "author": "Ghazaleh",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "method-override": "^3.0.0",
+    "pg": "^8.2.1"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
